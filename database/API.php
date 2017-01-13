@@ -14,10 +14,10 @@ $response = array(
 );
 
 try {
-    $host = parse_ini_file("database.config")['host'];
-    $dbname = parse_ini_file("database.config")['dbname'];
-    $dbuser = parse_ini_file("database.config")['dbuser'];
-    $dbpass = parse_ini_file("database.config")['dbpass'];
+    $host = parse_ini_file("database.conf")['host'];
+    $dbname = parse_ini_file("database.conf")['dbname'];
+    $dbuser = parse_ini_file("database.conf")['dbuser'];
+    $dbpass = parse_ini_file("database.conf")['dbpass'];
 
     $database = new Database($host, $dbname, $dbuser, $dbpass);
 
