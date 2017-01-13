@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="projekti@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.0">
+    <root id="1"/>
+    <database id="2" parent="1" name="projekti">
+      <ObjectId>16384</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-01-06.23:58:54.759</IntrospectionTimestamp>
+      <IntrospectionStateNumber>582</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12120</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="category_id_seq">
+      <ObjectId>16430</ObjectId>
+      <StateNumber>573</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="10" parent="3" name="events_id_seq">
+      <ObjectId>16432</ObjectId>
+      <StateNumber>575</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="11" parent="3" name="status_id_seq">
+      <ObjectId>16434</ObjectId>
+      <StateNumber>578</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="12" parent="3" name="category">
+      <ObjectId>16436</ObjectId>
+      <StateNumber>580</StateNumber>
+    </table>
+    <table id="13" parent="3" name="status">
+      <ObjectId>16454</ObjectId>
+      <StateNumber>582</StateNumber>
+    </table>
+    <column id="14" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>580</StateNumber>
+      <DefaultExpression>nextval(&apos;category_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="15" parent="12" name="category">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>580</StateNumber>
+    </column>
+    <index id="16" parent="12" name="category_pkey">
+      <ObjectId>16443</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="17" parent="12" name="category_pkey">
+      <ObjectId>16444</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>category_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="18" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>582</StateNumber>
+      <DefaultExpression>nextval(&apos;status_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="19" parent="13" name="status">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>582</StateNumber>
+    </column>
+    <index id="20" parent="13" name="status_pkey">
+      <ObjectId>16461</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="21" parent="13" name="status_pkey">
+      <ObjectId>16462</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>status_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

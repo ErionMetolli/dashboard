@@ -1,0 +1,5 @@
+[SectionOne]
+host = localhost
+dbname = dashboard
+dbuser = username
+dbpass = password
